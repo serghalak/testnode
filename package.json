@@ -1,0 +1,75 @@
+{
+  "name": "passport-sequelize-pg",
+  "version": "1.0.0",
+  "description": "Using Passport with Sequelize and Postgres",
+  "main": "./dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "rimraf ./dist && babel -d ./dist ./app -s && node ./dist/server.js",
+    "dev": "node dev.js",
+    "lint:js": "eslint ./app",
+    "lint-staged": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/..."
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/..."
+  },
+  "homepage": "https://github.com/...#readme",
+  "devDependencies": {
+    "babel-register": "^6.23.0",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-config-prettier": "^1.4.1",
+    "eslinnpm-plugin-import": "^2.2.0",
+    "lint-staged": "^3.3.1",
+    "pre-commit": "^1.2.2"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "env": {
+      "node": true
+    }
+  },
+  "pre-commit": "lint-staged",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-latest": "^6.24.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.1",
+    "rimraf": "^2.6.2",
+    "sequelize": "^4.31.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}
