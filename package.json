@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "rimraf ./dist && babel -d ./dist ./app -s && node ./dist/server.js",
-    "dev": "node dev.js",
+    "dev": "nodemon dev.js",
     "lint:js": "eslint ./app",
     "lint-staged": "lint-staged"
   },
@@ -27,6 +27,7 @@
     "eslint-config-prettier": "^1.4.1",
     "eslint-plugin-import": "^2.2.0",
     "lint-staged": "^3.3.1",
+    "nodemon": "^1.14.11",
     "pre-commit": "^1.2.2"
   },
   "lint-staged": {
@@ -44,17 +45,22 @@
   },
   "pre-commit": "lint-staged",
   "dependencies": {
+    "ajv": "^6.0.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-latest": "^6.24.1",
     "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
+    "jsonwebtoken": "^7.1.9",
+    "lodash": "^4.17.4",
     "passport": "^0.3.2",
+    "passport-jwt": "^2.1.0",
     "passport-local": "^1.0.0",
     "pg": "^7.4.1",
     "rimraf": "^2.6.2",
